@@ -40,17 +40,19 @@ public class MainActivity extends AppCompatActivity {
 
   private void initViews() {
     // Gyro:
+    final int ic_true = R.drawable.ic_check_circle;
+    final int ic_false = R.drawable.ic_cancel;
     if (SensorTools.hasSensorGyroscope(MainActivity.this)) {
-      mIsGyro.setImageResource(R.drawable.ic_check_circle);
+      mIsGyro.setImageResource(ic_true);
     } else {
-      mIsGyro.setImageResource(R.drawable.ic_no);
+      mIsGyro.setImageResource(ic_false);
     }
 
     // Accelerometer:
     if (SensorTools.hasSensorAccelerometer(MainActivity.this)) {
-      mIsAccelerometer.setImageResource(R.drawable.ic_check_circle);
+      mIsAccelerometer.setImageResource(ic_true);
     } else {
-      mIsAccelerometer.setImageResource(R.drawable.ic_no);
+      mIsAccelerometer.setImageResource(ic_false);
     }
   }
 
