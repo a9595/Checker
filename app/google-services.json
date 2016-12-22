@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "506923826710",
+    "firebase_url": "https://checkvr-2d7ef.firebaseio.com",
+    "project_id": "checkvr-2d7ef",
+    "storage_bucket": "checkvr-2d7ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:506923826710:android:12f5bac673b48de4",
+        "android_client_info": {
+          "package_name": "pl.wooddy.checkvr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "506923826710-s6871lh7ie6s66jo5ie4kgs8s87m7sa5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pl.wooddy.checkvr",
+            "certificate_hash": "08DF84ADB881104C5E2B1F2C3B110E0074A4192F"
+          }
+        },
+        {
+          "client_id": "506923826710-b2e8i8gik3pg6rupjjr86rl0kmcsqmtj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBl_fFySAJMnt1LupIq9GVnZmnG7GpFzDk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "506923826710-b2e8i8gik3pg6rupjjr86rl0kmcsqmtj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
