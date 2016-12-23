@@ -29,13 +29,21 @@ public class MainActivity extends AppCompatActivity {
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+    startSplashScreen();
+
     setContentView(R.layout.activity_main);
     ButterKnife.bind(this);
-    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-    setSupportActionBar(toolbar);
+    setSupportActionBar(mToolbar);
     initFAB();
 
     initViews();
+  }
+
+  private void startSplashScreen() {
+    if (!MyApplication.sIsOpenedSplashScreen) {
+      final Intent intent = new Intent(this, SplashScreenActivity.class);
+      startActivity(intent);
+    }
   }
 
   private void initViews() {

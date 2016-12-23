@@ -9,6 +9,7 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 
 public class MyApplication extends Application {
   public static FirebaseAnalytics sFirebaseAnalytics;
+  public static boolean sIsOpenedSplashScreen = false;
 
   @Override public void onCreate() {
     super.onCreate();
