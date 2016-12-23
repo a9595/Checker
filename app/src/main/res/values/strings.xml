@@ -5,4 +5,7 @@
   <string name="accelerometer" >Accelerometer</string >
   <string name="learn_more" >Learn more</string >
   <string name="customizable_vr_headsets" >Customizable VR headsets</string >
+  <string name="your_smartphone_is_ready_for_vr" >Your smartphone is ready for VR</string >
+  <string name="congratulations" >Congratulations!</string >
+  <string name="title_activity_splash_screen" >SplashScreenActivity</string >
 </resources >

@@ -155,17 +155,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="Congratulations!"
+        android:text="@string/congratulations"
         android:textAlignment="center"
         android:textAllCaps="true"
+        android:textSize="22sp"
+        android:textStyle="bold"
         />
     <TextView
         android:id="@+id/smartphoneIsReady"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Your smartphone is ready"
+        android:text="@string/your_smartphone_is_ready_for_vr"
         android:textAlignment="center"
         android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
         />
   </LinearLayout >
 
