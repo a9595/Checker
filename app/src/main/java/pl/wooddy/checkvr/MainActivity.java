@@ -15,7 +15,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,6 +27,14 @@ public class MainActivity extends AppCompatActivity {
   @BindView(R.id.isAccelerometer) ImageView mIsAccelerometer;
   @BindView(R.id.content_main) ConstraintLayout mContentMain;
   @BindView(R.id.fab) FloatingActionButton mFab;
+  @BindView(R.id.gyroscopeImage) ImageView mGyroscopeImage;
+  @BindView(R.id.accelerometerImage) ImageView mAccelerometerImage;
+  @BindView(R.id.constraintLayout) ConstraintLayout mConstraintLayout;
+  @BindView(R.id.logo) ImageView mLogo;
+  @BindView(R.id.customizableVrHeadset) TextView mCustomizableVrHeadset;
+  @BindView(R.id.learnMoreButton) ImageView mLearnMoreButton;
+  @BindView(R.id.smartphoneIsReady) TextView mSmartphoneIsReady;
+  @BindView(R.id.congrats) TextView mCongrats;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -68,18 +75,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     if (!hasSensorAccelerometer || !hasSensorGyroscope) {
-
-    } else {
-
+      mSmartphoneIsReady.setVisibility(View.GONE);
+      mCongrats.setText(R.string.doesnt_support);
     }
   }
-
-  @OnClick(R.id.learnMoreButton) public void onClickFacebook() {
+  /*@OnClick(R.id.learnMoreButton) public void onClickFacebook() {
     FirebaseTools.logFunPageClick();
 
     final Intent intent = FacebookTools.getFacebookPageURLIntent(MainActivity.this);
     startActivity(intent);
-  }
+  }*/
 
   @Override public boolean onCreateOptionsMenu(Menu menu) {
     // Inflate the menu; this adds items to the action bar if it is present.

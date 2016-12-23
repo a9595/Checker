@@ -20,6 +20,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         app:popupTheme="@style/AppTheme.PopupOverlay"
+        fontPath="fonts/9584.otf"
         />
 
   </android.support.design.widget.AppBarLayout >
