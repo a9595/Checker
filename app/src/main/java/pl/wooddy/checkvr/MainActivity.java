@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainActivity extends AppCompatActivity {
@@ -79,12 +80,13 @@ public class MainActivity extends AppCompatActivity {
       mCongrats.setText(R.string.doesnt_support);
     }
   }
-  /*@OnClick(R.id.learnMoreButton) public void onClickFacebook() {
+
+  @OnClick(R.id.learnMoreButton) public void onClickFacebook() {
     FirebaseTools.logFunPageClick();
 
     final Intent intent = FacebookTools.getFacebookPageURLIntent(MainActivity.this);
     startActivity(intent);
-  }*/
+  }
 
   @Override public boolean onCreateOptionsMenu(Menu menu) {
     // Inflate the menu; this adds items to the action bar if it is present.
