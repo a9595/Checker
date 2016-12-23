@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     }
   }
 
-  @OnClick(R.id.facebookButton) public void onClickFacebook() {
+  @OnClick(R.id.learnMoreButton) public void onClickFacebook() {
     FirebaseTools.logFunPageClick();
 
     final Intent intent = FacebookTools.getFacebookPageURLIntent(MainActivity.this);
