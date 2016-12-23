@@ -1,5 +1,6 @@
 package pl.wooddy.checkvr;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,17 +52,25 @@ public class MainActivity extends AppCompatActivity {
     // Gyro:
     final int ic_true = R.drawable.ic_check_circle;
     final int ic_false = R.drawable.ic_cancel;
-    if (SensorTools.hasSensorGyroscope(MainActivity.this)) {
+    final boolean hasSensorGyroscope = SensorTools.hasSensorGyroscope(MainActivity.this);
+    if (hasSensorGyroscope) {
       mIsGyro.setImageResource(ic_true);
     } else {
       mIsGyro.setImageResource(ic_false);
     }
 
     // Accelerometer:
-    if (SensorTools.hasSensorAccelerometer(MainActivity.this)) {
+    final boolean hasSensorAccelerometer = SensorTools.hasSensorAccelerometer(MainActivity.this);
+    if (hasSensorAccelerometer) {
       mIsAccelerometer.setImageResource(ic_true);
     } else {
       mIsAccelerometer.setImageResource(ic_false);
+    }
+
+    if (!hasSensorAccelerometer || !hasSensorGyroscope) {
+
+    } else {
+
     }
   }
 
@@ -89,6 +99,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     return super.onOptionsItemSelected(item);
+  }
+
+  @Override protected void attachBaseContext(Context newBase) {
+    super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
   }
 
   private void initFAB() {
